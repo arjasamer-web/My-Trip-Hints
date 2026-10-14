@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | My Trip Hints</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Tahoma, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           Header
+        ========================== */
+
+        .header {
+            background: linear-gradient(135deg, #0b7285, #1098ad);
+            color: #ffffff;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .header h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.92;
+        }
+
+        /* =========================
+           Main Container
+        ========================== */
+
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        /* =========================
+           About Section
+        ========================== */
+
+        .about-section {
+            background-color: #ffffff;
+            border-radius: 14px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+        }
+
+        .about-section.arabic {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .about-section.english {
+            direction: ltr;
+            text-align: left;
+        }
+
+        /* =========================
+           Titles
+        ========================== */
+
+        .main-title {
+            color: #0b7285;
+            font-size: 27px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #667085;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: #0b7285;
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        /* =========================
+           Content
+        ========================== */
+
+        .content-block {
+            margin-bottom: 32px;
+        }
+
+        .content-block p {
+            margin-bottom: 18px;
+            font-size: 16px;
+        }
+
+        strong {
+            color: #222;
+        }
+
+        /* =========================
+           Feature Cards
+        ========================== */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background-color: #f8fbfc;
+            border: 1px solid #e4eff2;
+            border-radius: 12px;
+            padding: 22px;
+            transition: 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(11, 114, 133, 0.10);
+            border-color: #b8dfe5;
+        }
+
+        .feature-icon {
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e5f6f8;
+            border-radius: 50%;
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+
+        .feature-card h3 {
+            color: #0b7285;
+            font-size: 17px;
+            margin-bottom: 9px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           Vision
+        ========================== */
+
+        .vision {
+            background: linear-gradient(
+                135deg,
+                #eef9fb,
+                #f7fcfd
+            );
+
+            border-inline-start: 4px solid #1098ad;
+            padding: 22px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        /* =========================
+           Divider
+        ========================== */
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 35px 0;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #dcdcdc;
+        }
+
+        /* =========================
+           Footer
+        ========================== */
+
+        .footer {
+            text-align: center;
+            background-color: #083e49;
+            color: #ffffff;
+            padding: 25px 20px;
+            margin-top: 40px;
+        }
+
+        .footer p {
+            margin: 4px 0;
+        }
+
+        .footer .copyright {
+            font-size: 13px;
+            opacity: 0.75;
+        }
+
+        /* =========================
+           Responsive Design
+        ========================== */
+
+        @media (max-width: 850px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .header {
+                padding: 35px 15px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .header p {
+                font-size: 15px;
+            }
+
+            .container {
+                margin: 20px auto;
+                padding: 0 12px;
+            }
+
+            .about-section {
+                padding: 22px 18px;
+                border-radius: 10px;
+            }
+
+            .main-title {
+                font-size: 23px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+            }
+
+            .section-title {
+                font-size: 18px;
+            }
+
+            .content-block p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="header">
+
+        <h1>My Trip Hints</h1>
+
+        <p>
+            About Us | من نحن
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- ==========================================
+             ARABIC VERSION
+        =========================================== -->
+
+        <section class="about-section arabic" lang="ar">
+
+            <h1 class="main-title">
+                من نحن
+            </h1>
+
+            <p class="subtitle">
+                دليلك الشامل ومجتمعك التفاعلي حول العالم.
+            </p>
+
+
+            <!-- About the App -->
+
+            <div class="content-block">
+
+                <h2 class="section-title">
+                    عن التطبيق
+                </h2>
+
+                <p>
+                    تطبيقنا هو وجهتك الأولى والكاملة لاستكشاف العالم بكل سهولة وذكاء.
+                    نجمع لك كل ما تحتاجه لتخطيط رحلتك في مكان واحد؛ من تفاصيل الدول
+                    والمدن، وأهم المعالم السياحية والأنشطة، وحتى متطلبات الفيزا
+                    وأسماء المطارات والمعلومات الأساسية لكل وجهة.
+                </p>
+
+                <p>
+                    لكننا لا نتوقف عند تقديم المعلومات فقط! نؤمن بأن أجمل ما في
+                    السفر هو التواصل والإلهام المشترك، لذلك وفرنا غرف محادثة خاصة
+                    (Chat Rooms) لكل دولة ومدينة، تتيح للمسافرين التواصل المباشر،
+                    تبادل النصائح، وتنظيم رحلات مشتركة والتواصل الميداني أثناء
+                    وجودهم في الوجهة.
+                </p>
+
+            </div>
+
+
+            <!-- Why Choose Us -->
+
+            <div class="content-block">
+
+                <h2 class="section-title">
+                    ما الذي يميزنا؟
+                </h2>
+
+                <div class="features">
+
+                    <!-- Feature 1 -->
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🌍
+                        </div>
+
+                        <h3>
+                            دليل سياحي شامل
+                        </h3>
+
+                        <p>
+                            معلومات دقيقة عن المعالم، الأنشطة، متطلبات الفيزا،
+                            والمطارات لكل دولة.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Feature 2 -->
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            💬
+                        </div>
+
+                        <h3>
+                            مجتمع مسافرين حقيقي
+                        </h3>
+
+                        <p>
+                            غرف محادثة تفاعلية لكل دولة ومدينة للتواصل وتنظيم
+                            الرحلات مع مسافرين آخرين.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Feature 3 -->
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            ✈️
+                        </div>
+
+                        <h3>
+                            تجربة سفر متكاملة
+                        </h3>
+
+                        <p>
+                            من مرحلة التخطيط والبحث إلى التواجد الميداني
+                            والالتقاء بالآخرين.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Vision -->
+
+            <div class="content-block">
+
+                <h2 class="section-title">
+                    رؤيتنا
+                </h2>
+
+                <div class="vision">
+
+                    ربط المسافرين ببعضهم البعض وبالعالم من حولهم، لجعل كل رحلة
+                    تجربة غنية بالمعرفة والصداقات والذكريات الرائعة.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LANGUAGE DIVIDER
+        =========================================== -->
+
+        <div class="divider">
+            English Version
+        </div>
+
+
+        <!-- ==========================================
+             ENGLISH VERSION
+        =========================================== -->
+
+        <section class="about-section english" lang="en">
+
+            <h1 class="main-title">
+                About Us
+            </h1>
+
+            <p class="subtitle">
+                Your comprehensive travel guide &amp; interactive global community.
+            </p>
+
+
+            <!-- About the App -->
+
+            <div class="content-block">
+
+                <h2 class="section-title">
+                    About the App
+                </h2>
+
+                <p>
+                    Our app is your ultimate, all-in-one platform to explore the
+                    world with ease and confidence. We combine everything you need
+                    for trip planning in one place—from detailed insights on countries
+                    and cities, top attractions, visa requirements, and airport
+                    information, to essential travel data for every destination.
+                </p>
+
+                <p>
+                    But we go beyond information. We believe that the heart of travel
+                    lies in connection. That’s why we feature dedicated local
+                    Chat Rooms for every country and city, allowing travelers to
+                    connect directly, share insider tips, organize joint trips,
+                    and interact on the ground.
+                </p>
+
+            </div>
+
+
+            <!-- Why Choose Us -->
+
+            <div class="content-block">
+
+                <h2 class="section-title">
+                    Why Choose Us?
+                </h2>
+
+                <div class="features">
+
+
+                    <!-- Feature 1 -->
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            🌍
+                        </div>
+
+                        <h3>
+                            Comprehensive Travel Guide
+                        </h3>
+
+                        <p>
+                            Detailed info on attractions, activities,
+                            visa requirements, and airports worldwide.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Feature 2 -->
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            💬
+                        </div>
+
+                        <h3>
+                            Vibrant Travel Community
+                        </h3>
+
+                        <p>
+                            Interactive chat rooms for every country and city
+                            to connect with fellow travelers and plan
+                            activities together.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Feature 3 -->
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            ✈️
+                        </div>
+
+                        <h3>
+                            End-to-End Experience
+                        </h3>
+
+                        <p>
+                            From initial research and planning to on-the-ground
+                            networking and shared adventures.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Vision -->
+
+            <div class="content-block">
+
+                <h2 class="section-title">
+                    Our Vision
+                </h2>
+
+                <div class="vision">
+
+                    To connect travelers with the world and with each other,
+                    turning every trip into a richer journey filled with shared
+                    knowledge, connections, and unforgettable experiences.
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="footer">
+
+        <p>
+            <strong style="color: white;">My Trip Hints</strong>
+        </p>
+
+        <p class="copyright">
+            &copy; 2026 My Trip Hints. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
